@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Loja Saúde Natural</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">Saúde Natural</div>
+    <ul class="nav-links">
+      <li><a href="#viva-leve">Início</a></li>
+      <li><a href="#product-grid">Produtos</a></li>
+      <li><button id="cart-toggle" aria-label="Abrir carrinho">🛒 <span id="cart-count">0</span></button></li>
+      <li><a href="#about">Sobre</a></li>
+      <li><a href="#privacy">Política</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section id="viva-leve" aria-label="Seção Viva leve com saúde">
+    <canvas id="particles-canvas"></canvas>
+    <div class="content">
+      <h1>Viva leve com saúde 🥗✨</h1>
+      <p>Transforme sua rotina com nossos produtos naturais e nutritivos. Sinta a energia que só a natureza pode oferecer!</p>
+      <a href="#product-grid" class="btn-primary" aria-label="Ver produtos saudáveis">Confira nossos produtos</a>
+    </div>
+  </section>
+
+  <section id="product-grid" aria-label="Lista de produtos">
+    <h2>Produtos</h2>
+    <div class="products">
+      <div class="product-card">
+        <h3>Chá Verde 🍵</h3>
+        <p>R$ 12,00</p>
+        <button onclick="addToCart('Chá Verde', 12)">Adicionar ao carrinho</button>
+      </div>
+      <div class="product-card">
+        <h3>Sanduíche Natural 🥪</h3>
+        <p>R$ 18,00</p>
+        <button onclick="addToCart('Sanduíche Natural', 18)">Adicionar ao carrinho</button>
+      </div>
+      <div class="product-card">
+        <h3>Pão de Queijo 🧀</h3>
+        <p>R$ 8,00</p>
+        <button onclick="addToCart('Pão de Queijo', 8)">Adicionar ao carrinho</button>
+      </div>
+      <div class="product-card">
+        <h3>Suco Natural 🍊</h3>
+        <p>R$ 10,00</p>
+        <button onclick="addToCart('Suco Natural', 10)">Adicionar ao carrinho</button>
+      </div>
+      <div class="product-card">
+        <h3>Barra de Cereal 🍫</h3>
+        <p>R$ 6,00</p>
+        <button onclick="addToCart('Barra de Cereal', 6)">Adicionar ao carrinho</button>
+      </div>
+      <div class="product-card">
+        <h3>Granola 🥣</h3>
+        <p>R$ 14,00</p>
+        <button onclick="addToCart('Granola', 14)">Adicionar ao carrinho</button>
+      </div>
+      <div class="product-card">
+        <h3>Iogurte Natural 🥛</h3>
+        <p>R$ 7,00</p>
+        <button onclick="addToCart('Iogurte Natural', 7)">Adicionar ao carrinho</button>
+      </div>
+      <div class="product-card">
+        <h3>Salada Fresca 🥗</h3>
+        <p>R$ 20,00</p>
+        <button onclick="addToCart('Salada Fresca', 20)">Adicionar ao carrinho</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" aria-label="Sobre o criador">
+    <h2>Sobre</h2>
+    <p>Site criado por Rodrigo Melo Costa - 3º Ano C</p>Alunos: Pedro Elias - Emilly e Thawan |||
+    No Viva Leve, acreditamos que cuidar do corpo e da mente é a chave para uma vida mais plena e feliz. Por isso, dedicamos nosso trabalho a oferecer produtos naturais, selecionados com carinho e responsabilidade, para ajudar você a viver com mais saúde, energia e equilíbrio.
+  </section>
+
+  <section id="privacy" aria-label="Política de privacidade e segurança">
+    <h2>Política de Privacidade e Segurança</h2>
+    <p>
+      Este site utiliza cookies para melhorar a experiência do usuário.
+      Todos os dados pessoais são tratados com segurança e confidencialidade.
+      Não compartilhamos informações com terceiros sem consentimento.
+    </p>
+  </section>
+</main>
+
+<!-- Carrinho lateral -->
+<aside id="cart-sidebar" aria-label="Carrinho de compras" aria-hidden="true">
+  <header>
+    <h2>Carrinho 🛒</h2>
+    <button id="close-cart" aria-label="Fechar carrinho">&times;</button>
+  </header>
+  <div id="cart-items"></div>
+  <div id="cart-footer">
+    <p id="cart-total"></p>
+    <button id="checkout-btn" class="btn-primary">Finalizar pagamento 💳</button>
+  </div>
+</aside>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+:root {
+  --bg: #0f172a;
+  --light: #f8fafc;
+  --accent: #38bdf8;
+  --hover: #0ea5e9;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.login-container {
+  background: #1e293b;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+  animation: fadeIn 0.8s ease;
+}
+
+.form-box h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: #334155;
+  color: var(--light);
+  font-size: 1rem;
+}
+
+input:focus {
+  outline: 2px solid var(--accent);
+}
+
+button {
+  width: 100%;
+  padding: 0.8rem;
+  background: var(--accent);
+  border: none;
+  border-radius: 8px;
+  color: var(--light);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: var(--hover);
+}
+
+.switch-text {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.switch-text span {
+  color: var(--accent);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
